@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "PorscheNext-SemiBold";
+    box-sizing: border-box;
+    color: black;
+}
+.nav-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 30px;
+    z-index: 10;
+    .navbar {
+        label{
+            display: none;
+        }
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            img {
+                width: 10rem;
+            }
+        }
+        .content {
+            display: flex;
+            width: 50%;
+            color: white;
+            justify-content: space-between;
+            .nav-content {
+                cursor: pointer;
+                display: inline;
+                font-size: 1.15rem;
+            }
+            .container {
+                display: none;
+                background-color: white;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                justify-content: center;
+                width: 100%;
+                left: 0;
+                top: 0;
+                position: absolute;
+                z-index: -1;
+                padding: 20px 70px;
+                padding-top: 75px;
+                animation: fromTop 0.3s ease-in-out;
+            }
+            .models {
+                .model-container {
+                    bottom: -29rem;
+                    padding-top: 65px;
+                    .car-brand {
+                        text-decoration: none;
+                        padding: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        img {
+                            width: 70%;
+                            align-self: center;
+                            transition: 0.2s ease-out;
+                        }
+                        .name {
+                            font-size: 2rem;
+                        }
+                        .type {
+                            font-size: 1rem;
+                            display: flex;
+                            gap: 1rem;
+                            .box {
+                                margin-top: 5px;
+                                color: white;
+                                padding: 4px 7px;
+                                background-color: black;
+                                border-radius: 5px;
+                                width: 4rem;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    .car-brand:hover {
+                        background-color: rgba(220, 220, 220, 0.5);
+                        backdrop-filter: blur(30px);
+                        border-radius: 10px;
+                        img {
+                            transform: translateX(5%);
+                        }
+                    }
+                }
+            }
+            .models:hover {
+                .model-container {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 1.5rem;
+                    row-gap: 1.5rem;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            .trio {
+                .trio-container {
+                    bottom: -26.5rem;
+                    gap: 8rem;
+                    .image-container {
+                        position: relative;
+                        transition: 0.3s;
+                        img {
+                            border-radius: 5px;
+                            width: 267px;
+                            height: 375px;
+                        }
+                        p {
+                            position: absolute;
+                            top: 1%;
+                            left: 4%;
+                            font-size: 1.6rem;
+                            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+                            color: white;
+                        }
+                    }
+                    .image-container:hover {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+            .trio:hover {
+                .trio-container {
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+@keyframes fromTop {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.iUnderstandItNow {
+    margin-top: 7rem;
+    padding: 0% 7%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .love-quote {
+        text-align: center;
+        width: 60%;
+        .headline {
+            font-size: 2.3rem;
+        }
+        p:nth-child(2) {
+            margin: 1rem 0rem;
+            font-family: "Roboto Condensed";
+            line-height: 1.4rem;
+        }
+    }
+    img {
+        border-radius: 10px;
+        margin-top: 2rem;
+        width: 85%;
+    }
+}
+.requirement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem 0rem;
+    .bbold {
+        text-align: center;
+        font-size: 2.3rem;
+        margin-bottom: 2rem;
+    }
+    .ilist {
+        display: flex;
+        justify-content: center;
+        gap: 7%;
+        align-items: center;
+        img {
+            width: 20%;
+            border-radius: 10px;
+        }
+        li {
+            line-height: 2rem;
+            span:nth-child(1) {
+                font-size: 1.3rem;
+            }
+            .small {
+                font-family: "Roboto Condensed";
+            }
+        }
+    }
+}
+.advertise {
+    margin-top: 5%;
+    position: relative;
+    .imagea {
+        img {
+            width: 100%;
+            filter: brightness(50%);
+        }
+    }
+    .message {
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        p, label, a, button {
+            color: white;
+        }
+        p:nth-child(1) {
+            font-size: 2.5rem;
+        }
+        p:nth-child(2) {
+            width: 50%;
+            margin: 2rem 0rem;
+            font-family: "Roboto Condensed";
+        }
+        .btn {
+            font-size: 1.3rem;
+            padding: 8px 3rem;
+            border-radius: 10px;
+            border: 2px solid white;
+            background-color: transparent;
+            cursor: pointer;
+        }
+        label, a {
+            font-size: 0.9rem;
+            font-family: "Roboto Condensed";
+        }
+    }
+}
+.locationn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 1.8rem 0rem;
+    .headlins {
+        margin-bottom: 1.8rem;
+        font-size: 2.3rem;
+    }
+    a {
+        width: 18%;
+        background-color: rgb(220, 219, 219);
+        border-radius: 10px;
+        padding: 10px;
+        .click {
+            img {
+                border-radius: 10px;
+                width: 100%;
+                margin-bottom: 4rem;
+            }
+        }
+    }
+}
+.footer {
+    background-color: black;
+    color: white;
+    padding: 0px 60px;
+    i, a, p, label {
+        color: white;
+    }
+    .title {
+        font-size: 1.3rem;
+        margin: 12px 0px;
+        color: white;
+    }
+    .info-01 {
+        display: flex;
+        gap: 9rem;
+        .location-contact {
+            .contact {
+                margin-top: 2rem;
+            }
+        }
+        .social-media {
+            width: 50%;
+            .info {
+                margin: 8px 0px;
+            }
+            .media {
+                a {
+                    margin: 0px 4px;
+                    text-align: center;
+                    i {
+                        padding: 11px 0px;
+                        background-color: white;
+                        color: black;
+                        border-radius: 6px;
+                        font-size: 1.2rem;
+                        width: 7.5%;
+                    }
+                }
+            }
+        }
+    }
+    .info-02 {
+        display: flex;
+        flex-direction: column;
+        .link {
+            display: flex;
+            gap: 3.5rem;
+            div {
+                display: flex;
+                flex-direction: column;
+                a {
+                    margin: 5px 0px;
+                }
+            }
+        }
+    }
+    .ruler {
+        width: 100%;
+        background-color: rgba(149, 148, 148, 0.747);
+        height: 1px;
+        margin: 4rem 0rem;
+    }
+    .info-03 {
+        .company {
+            text-align: center;
+            padding: 3rem 0rem;
+            a {
+                margin: 40px;
+                .papan {
+                    width: 22%;
+                }
+                .porsche {
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
+
+@media (width <= 1080px) {
+    .nav-bar{
+        .navbar{
+            label{
+                display: block;
+            }
+            .content{
+                display: none;
+                position: fixed;
+                width: 100%;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                padding: 30px;
+                background-color: rgb(255, 255, 255);
+                .models:hover{
+                    .overflow{
+                        overflow-y: hidden;
+                        .model-container{
+                            overflow-y: scroll;
+                            grid-template-columns: repeat(1,1fr)
+                        }
+                    }
+
+                }
+                .container{
+                position: relative;
+                bottom: 2rem;
+                background-color: aqua;
+                }
+                
+                
+            }
+        }
+        #check:checked ~ .content{
+            display: block;
+        }
+    }
+    .footer {
+        .info-01 {
+            flex-direction: column;
+            gap: 3rem;
+
+            .social-media {
+                width: 100%;
+            }
+        }
+    }
+}

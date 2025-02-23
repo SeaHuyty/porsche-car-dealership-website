@@ -1,0 +1,560 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "PorscheNext-SemiBold";
+    box-sizing: border-box;
+    color: black;
+}
+.nav-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 30px;
+    z-index: 10;
+    .navbar {
+        label{
+            display: none;
+        }
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            img {
+                width: 10rem;
+            }
+        }
+        .content {
+  
+            display: flex;
+            width: 50%;
+            color: white;
+            justify-content: space-between;
+            .nav-content {
+                cursor: pointer;
+                display: inline;
+                font-size: 1.15rem;
+            }
+            .container {
+  
+                display: none;
+                background-color: white;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                justify-content: center;
+                width: 100%;
+                left: 0;
+                top: 0;
+                right: 0;
+                position: absolute;
+                z-index: -1;
+                padding: 20px 70px;
+                padding-top: 75px;
+                animation: fromTop 0.3s ease-in-out;
+            }
+            .models {
+                .model-container {
+                    bottom: -29rem;
+                    padding-top: 65px;
+                    .car-brand {
+                        text-decoration: none;
+                        padding: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        img {
+                            width: 70%;
+                            align-self: center;
+                            transition: 0.2s ease-out;
+                        }
+                        .name {
+                            font-size: 2rem;
+                        }
+                        .type {
+                            font-size: 1rem;
+                            display: flex;
+                            gap: 1rem;
+                            .box {
+                                margin-top: 5px;
+                                color: white;
+                                padding: 4px 7px;
+                                background-color: black;
+                                border-radius: 5px;
+                                width: 4rem;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    .car-brand:hover {
+                        background-color: rgba(220, 220, 220, 0.5);
+                        backdrop-filter: blur(30px);
+                        border-radius: 10px;
+                        img {
+                            transform: translateX(5%);
+                        }
+                    }
+                }
+            }
+            .models:hover {
+                .model-container {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 1.5rem;
+                    row-gap: 1.5rem;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            .trio {
+                .trio-container {
+                    bottom: -26.5rem;
+                    gap: 8rem;
+                    .image-container {
+                        position: relative;
+                        transition: 0.3s;
+                        img {
+                            border-radius: 5px;
+                            width: 267px;
+                            height: 375px;
+                        }
+                        p {
+                            position: absolute;
+                            top: 1%;
+                            left: 4%;
+                            font-size: 1.6rem;
+                            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+                            color: white;
+                        }
+                    }
+                    .image-container:hover {
+                        transform: scale(1.05);
+                    }
+                    
+                  }
+                }
+                .trio:hover {
+                    .trio-container {
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+@keyframes fromTop {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.header {
+    margin-top: 5rem;
+    padding: 0% 7%;
+    img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    .quote {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .title {
+            font-size: 3rem;
+            line-height: 3.3rem;
+        }
+        .subtitle {
+            width: 37%;
+            p:nth-child(1) {
+                font-size: 1.8rem;
+            }
+            p:nth-child(2) {
+                margin-bottom: 15px;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+.Finance {
+    margin-top: 1rem;
+    .name {
+        text-align: center;
+        font-size: 2rem;
+    }
+    .section {
+        display: flex;
+        padding: 3% 7%;
+        justify-content: center;
+        gap: 15%;
+        .text {
+            width: 30%;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 200; 
+            }
+            .bold {
+                font-size: bold;
+            }
+        }
+        img {
+            border-radius: 10px;
+            width: 35%;
+            height: 100%;
+        }
+        .gray-box {
+            background-color: rgb(75, 73, 73);
+            border: 1px solid #1d1c1c;
+            padding: 10px;
+            width: fit-content;
+            border-radius: 8px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .gray-box a {
+            color: rgb(255, 255, 255);
+            text-decoration: underline;
+        }
+    }
+
+    .models-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 30px;
+        padding: 20px;
+        background-color: #fff;
+    }
+    
+    .model {
+        text-align: center;
+        background-color: #f9f9f9;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .model img {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 8px;
+    }
+    
+    .model h3 {
+        font-size: 1.5rem;
+        margin-top: 10px;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+    
+    .model .discover-link {
+        display: inline-block;
+        margin-top: 10px;
+        font-weight: bold;
+        text-decoration: underline;
+        color: black;
+        transition: color 0.2s ease;
+    }
+    
+    .model .discover-link:hover {
+        color: #007BFF;
+    }
+    
+    .model:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .contract-plan {
+        position: relative;
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        overflow: hidden;
+    }
+    
+    .image1 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .textinimg1{
+        position: absolute;
+        padding: 100px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .textinimg1 h1{
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin: 0 0 10px 0;
+        line-height: 1.5;
+        color: white;
+    }
+    
+    .textinimg1 p {
+        font-size: 1rem;
+        margin: 0 0 15px 0;
+        color: white;
+    }
+    
+    .button {
+        display: inline-block;
+        text-decoration: underline;
+        background-color: white;
+        color: black;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: background-color 0.2s ease;
+    }
+    
+    .button:hover {
+        background-color: #ccc;
+    }
+
+    .Lease-Purchase {
+        position: relative;
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        overflow: hidden;
+    }
+    
+    .image2 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .textinimg2 {
+        position: absolute;
+        top: 50%;
+        right:5%;
+        transform: translateY(-50%);
+        text-align: right;  
+        padding: 100px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+    
+    .textinimg2 h1 {
+        font-size: 2.5rem;
+        left: 10%;
+        right: 90%;
+        font-weight: bold;
+        margin: 0 0 10px 0;
+        line-height: 1.5;
+        color: white;
+    }
+    
+    .textinimg2 p {
+        font-size: 1rem;
+        margin: 0 0 15px 0;
+        color: white;
+    }
+    
+    .button {
+        display: inline-block;
+        text-decoration: underline;
+        background-color: white;
+        color: black;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: background-color 0.2s ease;
+    }
+    
+    .button:hover {
+        background-color: #ccc;
+    }
+    
+    .Hire-Purchase {
+        position: relative;
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        overflow: hidden;
+    }
+    
+    .image3 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .textinimg3 {
+        position: absolute;
+        padding: 100px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+    
+    .textinimg3 h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin: 0 0 10px 0;
+        line-height: 1.5;
+        color: white;
+    }
+    
+    .textinimg3 p {
+        font-size: 1rem;
+        margin: 0 0 15px 0;
+        color: white;
+    }
+    
+    .button {
+        display: inline-block;
+        text-decoration: underline;
+        background-color: white;
+        color: black;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: background-color 0.2s ease;
+    }
+    
+    .button:hover {
+        background-color: #ccc;
+    }
+
+
+
+    .footer {
+        background-color: black;
+        color: white;
+        padding: 0px 60px;
+        i, a, p, label {
+            color: white;
+        }
+        .title {
+            font-size: 1.3rem;
+            margin: 12px 0px;
+            color: white;
+        }
+        .info-01 {
+            display: flex;
+            gap: 9rem;
+            .location-contact {
+                .contact {
+                    margin-top: 2rem;
+                }
+            }
+            .social-media {
+                width: 50%;
+                .info {
+                    margin: 8px 0px;
+                }
+                .media {
+                    a {
+                        margin: 0px 4px;
+                        text-align: center;
+                        i {
+                            padding: 11px 0px;
+                            background-color: white;
+                            color: black;
+                            border-radius: 6px;
+                            font-size: 1.2rem;
+                            width: 7.5%;
+                        }
+                    }
+                }
+            }
+        }
+        .info-02 {
+            display: flex;
+            flex-direction: column;
+            .link {
+                display: flex;
+                gap: 3.5rem;
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    a {
+                        margin: 5px 0px;
+                    }
+                }
+            }
+        }
+        .ruler {
+            width: 100%;
+            background-color: rgba(149, 148, 148, 0.747);
+            height: 1px;
+            margin: 4rem 0rem;
+        }
+        .info-03 {
+            .company {
+                text-align: center;
+                padding: 3rem 0rem;
+                a {
+                    margin: 40px;
+                    .papan {
+                        width: 22%;
+                    }
+                    .porsche {
+                        width: 30%;
+                    }
+                }
+            }
+        }
+    }
+    
+    @media (width <= 1080px) {
+    
+        .nav-bar{
+            .navbar{
+                label{
+                    display: block;
+                }
+                .content{
+                    display: none;
+                    position: fixed;
+                    width: 100%;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    padding: 30px;
+                    background-color: rgb(255, 255, 255);
+                    .models:hover{
+                        .overflow{
+                            overflow-y: hidden;
+                            .model-container{
+                                overflow-y: scroll;
+                                grid-template-columns: repeat(1,1fr)
+                            }
+                        }
+    
+                    }
+                    .container{
+                    position: relative;
+                    bottom: 2rem;
+                    background-color: aqua;
+                    }
+                    
+                    
+                }
+            }
+            #check:checked ~ .content{
+                display: block;
+            }
+        }
+        .footer {
+            .info-01 {
+                flex-direction: column;
+                gap: 3rem;
+    
+                .social-media {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    

@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "PorscheNext-SemiBold";
+  box-sizing: border-box;
+  color: black;
+}
+.nav-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 30px;
+  z-index: 10;
+  .navbar {
+      label{
+          display: none;
+      }
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      .logo {
+          img {
+              width: 10rem;
+          }
+      }
+      .content {
+
+          display: flex;
+          width: 50%;
+          color: white;
+          justify-content: space-between;
+          .nav-content {
+              cursor: pointer;
+              display: inline;
+              font-size: 1.15rem;
+          }
+          .container {
+
+              display: none;
+              background-color: white;
+              border-bottom-left-radius: 10px;
+              border-bottom-right-radius: 10px;
+              justify-content: center;
+              width: 100%;
+              left: 0;
+              top: 0;
+              right: 0;
+              position: absolute;
+              z-index: -1;
+              padding: 20px 70px;
+              padding-top: 75px;
+              animation: fromTop 0.3s ease-in-out;
+          }
+          .models {
+              .model-container {
+                  bottom: -29rem;
+                  padding-top: 65px;
+                  .car-brand {
+                      text-decoration: none;
+                      padding: 10px;
+                      display: flex;
+                      flex-direction: column;
+                      img {
+                          width: 70%;
+                          align-self: center;
+                          transition: 0.2s ease-out;
+                      }
+                      .name {
+                          font-size: 2rem;
+                      }
+                      .type {
+                          font-size: 1rem;
+                          display: flex;
+                          gap: 1rem;
+                          .box {
+                              margin-top: 5px;
+                              color: white;
+                              padding: 4px 7px;
+                              background-color: black;
+                              border-radius: 5px;
+                              width: 4rem;
+                              text-align: center;
+                          }
+                      }
+                  }
+                  .car-brand:hover {
+                      background-color: rgba(220, 220, 220, 0.5);
+                      backdrop-filter: blur(30px);
+                      border-radius: 10px;
+                      img {
+                          transform: translateX(5%);
+                      }
+                  }
+              }
+          }
+          .models:hover {
+              .model-container {
+                  display: grid;
+                  grid-template-columns: repeat(3, 1fr);
+                  gap: 1.5rem;
+                  row-gap: 1.5rem;
+                  justify-content: center;
+                  align-items: center;
+              }
+          }
+          .trio {
+              .trio-container {
+                  bottom: -26.5rem;
+                  gap: 8rem;
+                  .image-container {
+                      position: relative;
+                      transition: 0.3s;
+                      img {
+                          border-radius: 5px;
+                          width: 267px;
+                          height: 375px;
+                      }
+                      p {
+                          position: absolute;
+                          top: 1%;
+                          left: 4%;
+                          font-size: 1.6rem;
+                          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+                          color: white;
+                      }
+                  }
+                  .image-container:hover {
+                      transform: scale(1.05);
+                  }
+                  
+                }
+              }
+              .trio:hover {
+                  .trio-container {
+                      display: flex;
+                  }
+              }
+          }
+      }
+  }
+
+@keyframes fromTop {
+  0%{
+      transform: translateY(-100%);
+  }
+  100%{
+      transform: translateY(0);
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* color: #333; */
+  /* line-height: 1.5; */
+}
+
+.container {
+  width: 90%;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 45px;
+  padding: 0% 7%;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+  margin-bottom: -1%;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.image-text-container {
+  align-items: center;
+  gap: 20px;
+}
+
+.image-section {
+  text-align: center;
+}
+
+.image-section img {
+  max-width: 120%;
+  max-width: 40%;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.image-caption {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  color: #000;
+}
+
+.text-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.text-section p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.form-check input {
+  margin: 0;
+}
+
+button {
+  padding: 5px 5px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+footer p{
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+footer a {
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+}

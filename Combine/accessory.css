@@ -1,0 +1,863 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "PorscheNext-SemiBold";
+    box-sizing: border-box;
+    color: black;
+}
+.nav-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 30px;
+    z-index: 10;
+    .navbar {
+        label{
+            display: none;
+        }
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            img {
+                width: 10rem;
+            }
+        }
+        .content {
+            display: flex;
+            width: 50%;
+            color: white;
+            justify-content: space-between;
+            align-items: center;
+            .nav-content {
+                cursor: pointer;
+                display: inline;
+                font-size: 1.15rem;
+            }
+            .container {
+                display: none;
+                background-color: white;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                justify-content: center;
+                width: 100%;
+                left: 0;
+                top: 0;
+                position: absolute;
+                z-index: -1;
+                padding: 20px 70px;
+                padding-top: 75px;
+                animation: fromTop 0.3s ease-in-out;
+            }
+            .models {
+                .model-container {
+                    bottom: -29rem;
+                    padding-top: 65px;
+                    .car-brand {
+                        text-decoration: none;
+                        padding: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        img {
+                            width: 70%;
+                            align-self: center;
+                            transition: 0.2s ease-out;
+                        }
+                        .name {
+                            font-size: 2rem;
+                        }
+                        .type {
+                            font-size: 1rem;
+                            display: flex;
+                            gap: 1rem;
+                            .box {
+                                margin-top: 5px;
+                                color: white;
+                                padding: 4px 7px;
+                                background-color: black;
+                                border-radius: 5px;
+                                width: 4rem;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    .car-brand:hover {
+                        background-color: rgba(220, 220, 220, 0.5);
+                        backdrop-filter: blur(30px);
+                        border-radius: 10px;
+                        img {
+                            transform: translateX(5%);
+                        }
+                    }
+                }
+            }
+            .models:hover {
+                .model-container {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 1.5rem;
+                    row-gap: 1.5rem;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            .trio {
+                .trio-container {
+                    bottom: -26.5rem;
+                    gap: 8rem;
+                    .image-container {
+                        position: relative;
+                        transition: 0.3s;
+                        img {
+                            border-radius: 5px;
+                            width: 267px;
+                            height: 375px;
+                        }
+                        p {
+                            position: absolute;
+                            top: 1%;
+                            left: 4%;
+                            font-size: 1.6rem;
+                            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+                            color: white;
+                        }
+                    }
+                    .image-container:hover {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+            .trio:hover {
+                .trio-container {
+                    display: flex;
+                }
+            }
+            .function-container {
+                display: flex;
+                width: 15%;
+                justify-content: space-between;
+                i {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+@keyframes fromTop {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.option {
+    margin-top: 5rem;
+    text-align: center;
+    button {
+        margin: 0% 3%;
+        padding: 10px 40px;
+        font-size: 1.1rem;
+        border-radius: 15px;
+        cursor: pointer;
+        border: none;
+        a{
+            text-decoration: none;
+        }
+    }
+    button:nth-child(2) {
+        a{
+
+            color: white;
+        }
+        background-color: black;
+    }
+    button:nth-child(1) {
+        a{
+
+            color: black;
+        }
+        background-color: white;
+        transition: 0.3s;
+    }
+    button:nth-child(1):hover {
+        a{
+
+            color: white;
+        }
+        background-color: black;
+    }
+}
+.headline {
+    position: relative;
+    padding: 0% 5%;
+    margin: 3% 0%;
+    display: flex;
+    justify-content: center;
+    img {
+        width: 100%;
+        border-radius: 10px;
+        filter: brightness(69%);
+        height: 652px;
+    }
+    .GojoSaturo {
+        position: absolute;
+        text-align: center;
+        top: 29%;
+        width: 50%;
+        p {
+            color: white;
+        }
+        p:nth-child(1) {
+            font-size: 2.5rem;
+        }
+        p:nth-child(2) {
+            font-family: "Roboto Condensed";
+            font-size: 1.1rem;
+            margin-top: 3%;
+        }
+    }
+}
+
+.shop {
+    margin-bottom: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .bold {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 3%;
+    }
+    .bbold {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .normal {
+        text-align: center;
+        font-size: 1.1rem;
+        margin-top: 1%;
+        margin-bottom: 3%;
+        font-family: "Roboto Condensed";
+        width: 80%;
+    }
+    .left {
+        align-self: self-start;
+        margin-left: 8%;
+        font-size: 1.7rem;
+    }
+    .item-container {
+        margin: 1rem 0rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0% 8%;
+        gap: 3%;
+        a {
+            text-decoration: none;
+        }
+        .boxer {
+            text-decoration: none;
+            display: grid;
+            align-items: center;
+            grid-template-rows: 1fr 50px 30px;
+            cursor: pointer;
+            .image-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 30px;
+                background-color: #f5f5f5;
+                border-radius: 10px;
+                margin-bottom: 3%;
+                align-items: center;
+                .head {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    width: 100%;
+                    justify-content: space-between;
+                    margin-bottom: 15%;
+                    p {
+                        padding: 5px 15px;
+                        background-color: black;
+                        color: white;
+                        width: auto;
+                        border-radius: 5px;
+                        font-family: "Roboto Condensed";
+                    }
+                    i {
+                        font-size: 1.2rem;
+                    }
+                }
+                img {
+                    width: 100%;
+                    mix-blend-mode: darken;
+                    transition: 0.2s ease-out;
+                    border-radius: 5px;
+                }
+                .adjust1 {
+                    width: 60%;
+                }
+                .adjust2 {
+                    width: 56%;
+                }
+            }
+            .image-container:hover {
+                img {
+                    transform: scale(108%);
+                }
+            }
+            .item-name {
+                text-align: center;
+                font-family: "Roboto Condensed";
+                font-size: 1.1rem;
+                line-height: 1.2rem;
+            }
+            .item-price {
+                text-align: center;
+            }
+        }
+        .product-info, .product-info02, .product-info03, .product-info04, .product-info05, .product-info06, .product-info07, .product-info08 {
+            position: fixed;
+            top: 0;
+            display: none;
+            bottom: 0; 
+            z-index: 10;
+            width: 100%;
+            left: 0;
+            backdrop-filter: blur(10px);
+            padding: 3% 5%;
+            background-color: rgba(0, 0, 0, 0.24);
+            flex-direction: row;
+            gap: 1%;
+            .itadori-Yuji {
+                animation: scale 0.4s;
+                display: flex;
+                flex-direction: row;
+                background-color: #f5f5f5;
+                border-radius: 20px;
+                .image {
+                    border-radius: 20px;
+                    border-radius: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    overflow-y: scroll;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .image::-webkit-scrollbar {
+                    display: none;
+                }
+                .sukuna {
+                    padding: 3%;
+                    p:nth-child(1) {
+                        font-family: "Roboto Condensed";
+                        font-size: 1.1rem;
+                    }
+                    p:nth-child(2) {
+                        font-size: 2rem;
+                    }
+                    p:nth-child(3) {
+                        font-size: 1.8rem;
+                        font-family: "Roboto Condensed";
+                        span {
+                            font-size: 1.1rem;
+                            font-family: "Roboto Condensed";
+                            color: rgb(169, 167, 167);
+                        }
+                    }
+                    p:nth-child(4) {
+                        font-family: "Roboto Condensed";
+                        font-size: 1rem;
+                        margin: 3% 0%;
+                    }
+                    .ruler {
+                        width: 100%;
+                        height: 1px;
+                        background-color: rgba(158, 158, 158, 0.363);
+                        margin: 5% 0%;
+                    }
+                    .size {
+                        p:nth-child(1) {
+                            font-family: "PorscheNext-SemiBold";
+                            font-size: 1.3rem;
+                            margin-bottom: 2%;
+                        }
+                        .geto {
+                            border: 1px solid black;
+                            width: 8%;
+                            padding: 6px;
+                            margin-right: 2%;
+                            cursor: pointer;
+                        }
+                    }
+                    .basket {
+                        padding: 10px 40px;
+                        font-size: 1.05rem;
+                        color: white;
+                        background-color: black;
+                        border: none;
+                        font-family: "Roboto Condensed";
+                        cursor: pointer;
+                    }
+                    .row {
+                        display: flex;
+                        align-items: center;
+                        margin-top: 1rem;
+                        .green {
+                            width: 0.4rem;
+                            height: 2rem;
+                            background-color: green;
+                            margin-right: 1rem;
+                            border-radius: 10px;
+                        }
+                        p {
+                            font-size: 1rem;
+                            font-family: "Roboto Condensed";
+                        }
+                    }
+
+                }
+            }
+            label {
+                i {
+                    background-color: rgb(255, 255, 255);
+                    padding: 15px;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                    clip-path: circle();
+                }
+            }
+        }
+        #display:checked ~ .product-info{
+            display: flex;
+        }
+        #display02:checked ~ .product-info02{
+            display: flex;
+        }
+        #display03:checked ~ .product-info03{
+            display: flex;
+        }
+        #display04:checked ~ .product-info04{
+            display: flex;
+        }
+        #display05:checked ~ .product-info05{
+            display: flex;
+        }
+        #display06:checked ~ .product-info06{
+            display: flex;
+        }
+        #display07:checked ~ .product-info07{
+            display: flex;
+        }
+        #display08:checked ~ .product-info08{
+            display: flex;
+        }
+    }
+    .btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
+        button {
+            padding: 10px 30px;
+            font-size: 1.1rem;
+            font-family: "Roboto Condensed";
+            color: white;
+            background-color: black;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    }
+}
+
+.image-holder {
+    padding: 0% 8%;
+    margin-top: 6%;
+    .img {
+        border-radius: 10px;
+        scroll-snap-align: start;
+        border-radius: 10px;
+        background-color: #f5f5f5;
+        height: 80vh;
+        width: 100%;
+        position: relative;
+        z-index: -10;
+        background-image: url(https://shop.porsche.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F1oyzmkwpf3d5%2F2lkuN8q0Zli9qOKVzfuOCp%2Fb8f4c84e88847a330822d12857a8e274%2FThe_new_electric_Porsche_Macan_with_a_bike_rack_and_two_women_standing_next_to_the_car.jpg&w=1200&q=75);
+        background-size: cover;
+    
+        .container {
+            transition: 0.5s;
+            width: 60px;
+            height: 60px;
+            z-index: 11;
+            transform: translate(-50%,50%);
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i {
+                cursor: pointer;
+                background-color: rgb(255, 255, 255);
+                clip-path: circle();
+                padding: 6px;
+                transform: scale(1.4);
+                z-index: 10;
+            }  
+            div:nth-child(1){
+                background-color: rgba(255, 255, 255, 0.31);
+                width: 100%;
+                height: 100%;
+                clip-path: circle();
+                position: absolute;
+                top: 0;
+                z-index: -2;
+                left: 0;
+                animation: shadow 2s ease-in-out infinite;
+                animation-delay: 0.3s;
+    
+            }
+            div:nth-child(2){
+                animation: shadow 2s ease-in-out infinite;
+                background-color: rgba(255, 255, 255, 0.471);
+                width: 80%;
+                height: 80%;
+                clip-path: circle();
+                position: absolute;
+                top: 50%;
+                z-index: -2;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+        .item09 {
+            top: 65%;
+            left: 27%;
+        }
+    
+        .product-info {
+            position: fixed;
+            top: 0;
+            display: none;
+            bottom: 0; 
+            z-index: 11;
+            width: 100%;
+            left: 0;
+            padding: 3% 5%;
+            background-color: rgba(0, 0, 0, 0.24);
+            flex-direction: row;
+            gap: 1%;
+            .itadori-Yuji {
+                animation: scale 0.4s;
+                display: flex;
+                flex-direction: row;
+                background-color: #f5f5f5;
+                border-radius: 20px;
+                .image {
+                    border-radius: 20px;
+                    border-radius: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    overflow-y: scroll;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .image::-webkit-scrollbar {
+                    display: none;
+                }
+                .sukuna {
+                    padding: 3%;
+                    p:nth-child(1) {
+                        font-family: "Roboto Condensed";
+                        font-size: 1.1rem;
+                    }
+                    p:nth-child(2) {
+                        font-size: 2rem;
+                    }
+                    p:nth-child(3) {
+                        font-size: 1.8rem;
+                        font-family: "Roboto Condensed";
+                        span {
+                            font-size: 1.1rem;
+                            font-family: "Roboto Condensed";
+                            color: rgb(169, 167, 167);
+                        }
+                    }
+                    p:nth-child(4) {
+                        font-family: "Roboto Condensed";
+                        font-size: 1rem;
+                        margin: 3% 0%;
+                    }
+                    .ruler {
+                        width: 100%;
+                        height: 1px;
+                        background-color: rgba(158, 158, 158, 0.363);
+                        margin: 5% 0%;
+                    }
+                    .size {
+                        p:nth-child(1) {
+                            font-family: "PorscheNext-SemiBold";
+                            font-size: 1.3rem;
+                            margin-bottom: 2%;
+                        }
+                        .geto {
+                            border: 1px solid black;
+                            width: 8%;
+                            padding: 6px;
+                            margin-right: 2%;
+                            cursor: pointer;
+                        }
+                    }
+                    .basket {
+                        padding: 10px 40px;
+                        font-size: 1.05rem;
+                        color: white;
+                        background-color: black;
+                        border: none;
+                        font-family: "Roboto Condensed";
+                        cursor: pointer;
+                    }
+                    .row {
+                        display: flex;
+                        align-items: center;
+                        margin-top: 1rem;
+                        .green {
+                            width: 0.4rem;
+                            height: 2rem;
+                            background-color: green;
+                            margin-right: 1rem;
+                            border-radius: 10px;
+                        }
+                        p {
+                            font-size: 1rem;
+                            font-family: "Roboto Condensed";
+                        }
+                    }
+    
+                }
+            }
+            label {
+                i {
+                    background-color: rgb(255, 255, 255);
+                    padding: 15px;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                    clip-path: circle();
+                }
+            }
+        }
+        .product-info::after{
+            content: '';
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background-color: rgba(33, 31, 31, 0.819);
+            backdrop-filter: blur(10px);
+    
+        }
+        #display-item09:checked ~ .product-info09 {
+            display: flex;
+        }
+    }
+}
+
+@keyframes shadow{
+    0%,100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+
+}
+
+.video-container {
+    position: relative;
+    width: 1000px;
+    height: 563px;
+    margin-bottom: 3%;
+    top: 50%;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.controls {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 50px; /* Ensure equal width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls button i {
+    color: white;
+    font-size: 24px;
+}
+
+.controls button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+@keyframes scale {
+    0%{
+        scale: 0;
+    }
+    100%{
+        scale: 1;
+    }
+    
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 0px 60px;
+    i, a, p, label {
+        color: white;
+    }
+    .title {
+        font-size: 1.3rem;
+        margin: 12px 0px;
+        color: white;
+    }
+    .info-01 {
+        display: flex;
+        gap: 9rem;
+        .location-contact {
+            .contact {
+                margin-top: 2rem;
+            }
+        }
+        .social-media {
+            width: 50%;
+            .info {
+                margin: 8px 0px;
+            }
+            .media {
+                a {
+                    margin: 0px 4px;
+                    text-align: center;
+                    i {
+                        padding: 11px 0px;
+                        background-color: white;
+                        color: black;
+                        border-radius: 6px;
+                        font-size: 1.2rem;
+                        width: 7.5%;
+                    }
+                }
+            }
+        }
+    }
+    .info-02 {
+        display: flex;
+        flex-direction: column;
+        .link {
+            display: flex;
+            gap: 3.5rem;
+            div {
+                display: flex;
+                flex-direction: column;
+                a {
+                    margin: 5px 0px;
+                }
+            }
+        }
+    }
+    .ruler {
+        width: 100%;
+        background-color: rgba(149, 148, 148, 0.747);
+        height: 1px;
+        margin: 4rem 0rem;
+    }
+    .info-03 {
+        .company {
+            text-align: center;
+            padding: 3rem 0rem;
+            a {
+                margin: 40px;
+                .papan {
+                    width: 22%;
+                }
+                .porsche {
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
+
+@media (width <= 1080px) {
+    .nav-bar{
+        .navbar{
+            label{
+                display: block;
+            }
+            .content{
+                display: none;
+                position: fixed;
+                width: 100%;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                padding: 30px;
+                background-color: rgb(255, 255, 255);
+                .models:hover{
+                    .overflow{
+                        overflow-y: hidden;
+                        .model-container{
+                            overflow-y: scroll;
+                            grid-template-columns: repeat(1,1fr)
+                        }
+                    }
+
+                }
+                .container{
+                position: relative;
+                bottom: 2rem;
+                background-color: aqua;
+                }
+                
+                
+            }
+        }
+        #check:checked ~ .content{
+            display: block;
+        }
+    }
+    .footer {
+        .info-01 {
+            flex-direction: column;
+            gap: 3rem;
+
+            .social-media {
+                width: 100%;
+            }
+        }
+    }
+}
