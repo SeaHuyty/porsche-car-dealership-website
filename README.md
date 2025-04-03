@@ -38,13 +38,13 @@ PaPaN-Porsche/
 ### 🔧 Installation  
 1. **Clone the repository**  
    ```sh
-   git clone https://github.com/your-username/PaPaN-Porsche.git
-   cd PaPaN-Porsche
+   git clone https://github.com/SeaHuyty/2ndYear-Term1-WebProject
+   cd 2ndYear-Term1-WebProject
    ```  
 2. **Open `index.html` in a browser**  
 
 ### 🖥️ Live Demo  
-*(If hosted, provide a link to the live website.)*  
+Coming Soon
 
 ## 📌 Future Enhancements  
 - **Car comparison feature**  
