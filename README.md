@@ -4,6 +4,10 @@
 
 This project is part of an **end-of-course assignment**, designed to demonstrate skills in **web development and UI/UX design**. The website's aesthetic and structure are inspired by **Porsche’s design philosophy**, focusing on **minimalism, precision, and high performance**.  
 
+## Live Demo
+
+Check out the live version of the project here: [Porsche Dealership Website](https://2ndyear-term1-webproject-porsche-dealership.vercel.app/index.html)
+
 ## 🛠️ Technologies Used  
 
 - **HTML** – Structuring the website's content.  
@@ -16,25 +20,7 @@ This project is part of an **end-of-course assignment**, designed to demonstrate
 - **Showcase of Porsche models**, including sports cars, SUVs, and sedans.  
 - **Interactive car details pages** with specifications and images.  
 - **Smooth animations and transitions** for a premium experience.  
-- **Navigation bar and responsive layout** for optimal usability on all devices.  
-
-## 📂 Future Project Structure  
-
-```
-PaPaN-Porsche/
-│── index.html
-│── about.html
-│── models.html
-│── contact.html
-│── css/
-│   ├── style.css
-│   ├── responsive.css
-│── js/
-│   ├── script.js
-│── assets/
-│   ├── images/
-│   ├── logos/
-```  
+- **Navigation bar and responsive layout** for optimal usability on all devices.    
 
 ## 🚀 Getting Started  
 ### 🔧 Installation  
