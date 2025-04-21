@@ -6,7 +6,7 @@ This project is part of an **end-of-course assignment**, designed to demonstrate
 
 ## Live Demo
 
-Check out the live version of the project here: [Porsche Dealership Website](https://2ndyear-term1-webproject-porsche-dealership.vercel.app/index.html)
+Check out the live version of the project here: [Porsche Dealership Website](https://2nd-year-term1-web-project.vercel.app/)
 
 ## 🛠️ Technologies Used  
 
