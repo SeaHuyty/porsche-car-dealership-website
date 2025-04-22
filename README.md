@@ -29,11 +29,15 @@ Check out the live version of the project here: [Porsche Dealership Website](htt
    git clone https://github.com/SeaHuyty/2ndYear-Term1-WebProject
    cd 2ndYear-Term1-WebProject
    ```  
+
 2. **Open `index.html` in a browser**  
 
-## 📌 Future Enhancements  
-- **Car comparison feature**  
-- **Integration with a backend for real-time inventory**  
+## 📌 Team Member
+
+- **Sea Huyty**  
+- **Pheng Lyming**
+- **Vorn Naratheany**
 
 ## 📜 License  
+
 This project is for educational purposes only.   
