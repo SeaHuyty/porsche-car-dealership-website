@@ -35,8 +35,8 @@ Check out the live version of the project here: [Porsche Dealership Website](htt
 ## 📌 Team Member
 
 - **Sea Huyty**  
-- **Pheng Lyming**
-- **Vorn Naratheany**
+- **[Pheng Lyming](https://github.com/Ming-99s)**
+- **[Vorn Naratheany](https://github.com/TheanyVorn)**
 
 ## 📜 License  
 
