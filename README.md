@@ -38,6 +38,6 @@ Check out the live version of the project here: [Porsche Dealership Website](htt
 - **[Pheng Lyming](https://github.com/Ming-99s)**
 - **[Vorn Naratheany](https://github.com/TheanyVorn)**
 
-## 📜 License  
+## License
 
-This project is for educational purposes only.   
+This project is licensed under the [MIT License](LICENSE). 
